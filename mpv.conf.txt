@@ -1,0 +1,42 @@
+# Default sub/audio lang.
+slang=enGB,en-GB,en,eng,enUS,en-US,unknown
+alang=ja,jp,jpn,enGB,en-GB,en,eng,enUS,en-US
+ytdl-raw-options=sub-lang="ja,jp,jpn,enGB,en-GB,en,eng,enUS,en-US",write-sub=
+# Forces showing subtitles while seeking through the video
+demuxer-mkv-subtitle-preroll
+# Backward compatibility for vsfilter fansubs
+sub-ass-use-video-data=all
+
+osc=no
+osd-bar=no
+border=no
+sub-use-margins
+sub-ass-force-margins
+
+demuxer-mkv-subtitle-preroll            # try to correctly show embedded subs when seeking
+sub-auto=fuzzy                          # external subs don't have to match the file name exactly to autoload
+sub-file-paths=ass:srt:sub:subs:subtitles    # search for external subs in the listed subdirectories
+embeddedfonts=yes                       # use embedded fonts for SSA/ASS subs
+sub-ass-style-overrides=Kerning=yes             # allows you to override style parameters of ASS scripts
+audio-file-auto=fuzzy                   # external audio doesn't has to match the file name exactly to autoload
+audio-pitch-correction=yes              # automatically insert scaletempo when playing with higher speed
+
+fs=yes
+pause=yes
+autofit-larger=90%x90%
+hls-bitrate=max
+
+# Deband 
+
+deband=no
+deband-iterations=4
+deband-threshold=48
+deband-range=24
+deband-grain=16
+dither-depth=auto
+gpu-context=auto
+blend-subtitles=yes
+interpolation=yes
+
+profile=high-quality
+
